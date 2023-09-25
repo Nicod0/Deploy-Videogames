@@ -7,7 +7,8 @@ import Home from "./Components/Home/Home";
 import { Routes, Route, useLocation, useNavigate } from "react-router-dom";
 import { useSelector } from "react-redux";
 import axios from "axios";
-axios.defaults.baseURL = "deploy-videogames-production-1b45.up.railway.app";
+axios.defaults.baseURL =
+  "https://deploy-videogames-production-1b45.up.railway.app/";
 
 const App = () => {
   const { pathname } = useLocation();
