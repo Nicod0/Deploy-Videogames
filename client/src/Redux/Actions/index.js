@@ -9,10 +9,7 @@ export const GET_GENRES = "GET_GENRES";
 export const addVideogame = (info) => {
   return async function (dispatch) {
     try {
-      const response = await axios.post(
-        "http://localhost:3001/videogames/",
-        info
-      );
+      const response = await axios.post("/videogames/", info);
       console.log(response);
       alert("usuario creado correctamente");
     } catch (error) {
@@ -24,7 +21,7 @@ export const addVideogame = (info) => {
 export const getVideogames = () => {
   return async function (dispatch) {
     try {
-      const response = await axios.get("http://localhost:3001/videogames");
+      const response = await axios.get("/videogames");
       return dispatch({
         type: GET_VIDEOGAMES,
         payload: response.data,
@@ -73,7 +70,7 @@ export const filterByOrigin = (origin) => {
 export const getGenres = () => {
   return async function (dispatch) {
     try {
-      const response = await axios.get(`http://localhost:3001/genres`);
+      const response = await axios.get(`/genres`);
       return dispatch({
         type: GET_GENRES,
         payload: response.data,
