@@ -6,6 +6,8 @@ import Page from "./Components/Page/Page";
 import Home from "./Components/Home/Home";
 import { Routes, Route, useLocation, useNavigate } from "react-router-dom";
 import { useSelector } from "react-redux";
+import axios from "axios";
+axios.defaults.baseURL = "http://localhost:3001/";
 
 const App = () => {
   const { pathname } = useLocation();
