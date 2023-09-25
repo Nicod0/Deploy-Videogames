@@ -1,0 +1,355 @@
+.principal {
+  height: 90vh;
+}
+.fondo {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-image: url("../../imagenes/star-wars.jpg");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  z-index: -2;
+}
+.titulos {
+  color: white;
+  font-size: 2em;
+  position: relative;
+  z-index: 1;
+  margin-top: -5%;
+  padding-top: 0;
+}
+.paginado {
+  padding: 2% 0;
+  height: 38vh;
+  width: 80%;
+  text-align: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 2% auto;
+  overflow: scroll;
+  scrollbar-width: none;
+  -ms-overflow-style: none;
+  scrollbar-color: transparent transparent;
+  border-radius: 2%;
+  box-shadow: 0 0 5px rgba(255, 0, 0, 0.5), 0 0 10px rgba(255, 0, 0, 0.5),
+    0 0 15px rgba(255, 0, 0, 0.5), 0 0 20px rgba(255, 0, 0, 0.5);
+}
+.filtros {
+  margin-top: 2%;
+}
+.buttons {
+  margin-bottom: 0;
+  padding-bottom: 0;
+  position: relative;
+  margin-top: 1%;
+}
+.button {
+  height: 4em;
+  width: 12em;
+  position: relative;
+  background-color: #434343;
+  color: white;
+  border: 2px solid rgba(255, 0, 0, 0.5);
+  padding: 10px 20px;
+  margin: 0 5px;
+  cursor: pointer;
+  border-radius: 4px;
+  overflow: hidden;
+  transition: all 500ms ease;
+  font-weight: 700;
+  z-index: 0;
+}
+.button::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 0;
+  margin: auto;
+  background-color: rgba(255, 0, 0, 0.5);
+  transition: all 500ms ease;
+  z-index: -1;
+}
+.button::before {
+  width: 0;
+  height: 100%;
+}
+.button:hover {
+  color: white;
+}
+.button:hover::before {
+  width: 100%;
+}
+.button:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+
+.pageNumber {
+  font-size: 2.5rem;
+  font-weight: bold;
+  font-weight: 700;
+  color: rgba(255, 0, 0, 0.5);
+  margin: 0 20px;
+}
+
+.page {
+  display: flex;
+  position: relative;
+  z-index: 1;
+}
+
+.paginado::-webkit-scrollbar {
+  display: none;
+}
+
+@media (min-width: 280px) and (max-width: 380px) {
+  .principal {
+    height: 85vh;
+  }
+  .titulos {
+    color: white;
+    font-size: 1em;
+    position: relative;
+    z-index: 1;
+    margin-top: 0;
+    padding-top: 0;
+  }
+  .paginado {
+    padding: 2%;
+    height: 30vh;
+    width: 80%;
+    text-align: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-left: 6%;
+    overflow: scroll;
+    scrollbar-width: none;
+    -ms-overflow-style: none;
+    scrollbar-color: transparent transparent;
+    border-radius: 2%;
+    box-shadow: 0 0 5px rgba(255, 0, 0, 0.5), 0 0 10px rgba(255, 0, 0, 0.5),
+      0 0 15px rgba(255, 0, 0, 0.5), 0 0 20px rgba(255, 0, 0, 0.5);
+  }
+  .button {
+    height: 2.5em;
+    width: 7em;
+    position: relative;
+    background-color: #434343;
+    color: white;
+    border: 2px solid rgba(255, 0, 0, 0.5);
+    padding: 5px 10px;
+    margin: 25px 3px;
+    cursor: pointer;
+    border-radius: 4px;
+    overflow: hidden;
+    transition: all 500ms ease;
+    font-weight: 700;
+    z-index: 0;
+  }
+  .buttons {
+    margin-bottom: 15%;
+    padding-bottom: 0;
+    text-align: center;
+    justify-content: center;
+    margin-top: 1%;
+    margin-left: -5%;
+  }
+  .pageNumber {
+    font-size: 1.5rem;
+    font-weight: bold;
+    font-weight: 700;
+    color: rgba(255, 0, 0, 0.5);
+    margin: 0 20px;
+  }
+}
+@media (min-width: 381px) and (max-width: 576px) {
+  .principal {
+    height: 85vh;
+  }
+  .titulos {
+    color: white;
+    font-size: 1.7em;
+    position: relative;
+    z-index: 1;
+    margin-top: 0;
+    padding-top: 0;
+  }
+  .paginado {
+    height: 28vh;
+    width: 85%;
+    text-align: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-left: 8%;
+    overflow: scroll;
+    scrollbar-width: none;
+    -ms-overflow-style: none;
+    scrollbar-color: transparent transparent;
+    border-radius: 2%;
+    box-shadow: 0 0 5px rgba(255, 0, 0, 0.5), 0 0 10px rgba(255, 0, 0, 0.5),
+      0 0 15px rgba(255, 0, 0, 0.5), 0 0 20px rgba(255, 0, 0, 0.5);
+  }
+  .button {
+    height: 3em;
+    width: 8em;
+    position: relative;
+    background-color: #434343;
+    color: white;
+    border: 2px solid rgba(255, 0, 0, 0.5);
+    padding: 5px 10px;
+    margin: 25px 3px;
+    cursor: pointer;
+    border-radius: 4px;
+    overflow: hidden;
+    transition: all 500ms ease;
+    font-weight: 700;
+    z-index: 0;
+    font-size: 1em;
+  }
+  .buttons {
+    margin-bottom: 15%;
+    padding-bottom: 0;
+    text-align: center;
+    justify-content: center;
+    margin-top: 1%;
+    margin-left: -2%;
+  }
+  .pageNumber {
+    font-size: 2.2rem;
+    font-weight: bold;
+    font-weight: 700;
+    color: rgba(255, 0, 0, 0.5);
+    margin: 0 20px;
+  }
+}
+@media (min-width: 577px) and (max-width: 767px) {
+  .principal {
+    height: 85vh;
+  }
+  .titulos {
+    color: white;
+    font-size: 1.7em;
+    position: relative;
+    z-index: 1;
+    margin-top: 0;
+    padding-top: 0;
+  }
+  .paginado {
+    height: 28vh;
+    width: 85%;
+    text-align: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-left: 8%;
+    overflow: scroll;
+    scrollbar-width: none;
+    -ms-overflow-style: none;
+    scrollbar-color: transparent transparent;
+    border-radius: 2%;
+    box-shadow: 0 0 5px rgba(255, 0, 0, 0.5), 0 0 10px rgba(255, 0, 0, 0.5),
+      0 0 15px rgba(255, 0, 0, 0.5), 0 0 20px rgba(255, 0, 0, 0.5);
+  }
+  .button {
+    height: 3em;
+    width: 8em;
+    position: relative;
+    background-color: #434343;
+    color: white;
+    border: 2px solid rgba(255, 0, 0, 0.5);
+    padding: 5px 10px;
+    margin: 25px 3px;
+    cursor: pointer;
+    border-radius: 4px;
+    overflow: hidden;
+    transition: all 500ms ease;
+    font-weight: 700;
+    z-index: 0;
+    font-size: 1em;
+  }
+  .buttons {
+    margin-bottom: 15%;
+    padding-bottom: 0;
+    text-align: center;
+    justify-content: center;
+    margin-top: 1%;
+    margin-left: -2%;
+  }
+  .pageNumber {
+    font-size: 2.2rem;
+    font-weight: bold;
+    font-weight: 700;
+    color: rgba(255, 0, 0, 0.5);
+    margin: 0 20px;
+  }
+}
+@media (min-width: 800px) and (max-width: 1199px) {
+  .principal {
+    height: 85vh;
+  }
+  .titulos {
+    color: white;
+    font-size: 2em;
+    position: relative;
+    z-index: 1;
+    margin-top: -5%;
+    padding-top: 0;
+  }
+  .paginado {
+    height: 35vh;
+    width: 80%;
+    text-align: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-left: 10%;
+    overflow: scroll;
+    scrollbar-width: none;
+    -ms-overflow-style: none;
+    scrollbar-color: transparent transparent;
+    border-radius: 2%;
+    box-shadow: 0 0 5px rgba(255, 0, 0, 0.5), 0 0 10px rgba(255, 0, 0, 0.5),
+      0 0 15px rgba(255, 0, 0, 0.5), 0 0 20px rgba(255, 0, 0, 0.5);
+  }
+  .button {
+    height: 3em;
+    width: 9em;
+    position: relative;
+    background-color: #434343;
+    color: white;
+    border: 2px solid rgba(255, 0, 0, 0.5);
+    padding: 5px 10px;
+    margin: 25px 3px;
+    cursor: pointer;
+    border-radius: 4px;
+    overflow: hidden;
+    transition: all 500ms ease;
+    font-weight: 700;
+    z-index: 0;
+    font-size: 1.1em;
+  }
+  .buttons {
+    margin-bottom: 5%;
+    padding-bottom: 0;
+    text-align: center;
+    justify-content: center;
+    margin-top: 1%;
+    margin-left: -2%;
+  }
+  .pageNumber {
+    font-size: 2.2rem;
+    font-weight: bold;
+    font-weight: 700;
+    color: rgba(255, 0, 0, 0.5);
+    margin: 0 20px;
+  }
+}
+@media (min-width: 1200px) and (max-width: 1600px) {
+}
