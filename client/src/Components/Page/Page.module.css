@@ -235,10 +235,10 @@
   }
   .titulos {
     color: white;
-    font-size: 1.7em;
+    font-size: 1.5em;
     position: relative;
     z-index: 1;
-    margin-top: 0;
+    margin-top: -2%;
     padding-top: 0;
   }
   .paginado {
@@ -254,6 +254,7 @@
     -ms-overflow-style: none;
     scrollbar-color: transparent transparent;
     border-radius: 2%;
+    margin-top: -10%;
     box-shadow: 0 0 5px rgba(255, 0, 0, 0.5), 0 0 10px rgba(255, 0, 0, 0.5),
       0 0 15px rgba(255, 0, 0, 0.5), 0 0 20px rgba(255, 0, 0, 0.5);
   }
@@ -272,18 +273,18 @@
     transition: all 500ms ease;
     font-weight: 700;
     z-index: 0;
-    font-size: 1em;
+    font-size: 0.8em;
   }
   .buttons {
-    margin-bottom: 15%;
+    margin-bottom: 0;
     padding-bottom: 0;
     text-align: center;
     justify-content: center;
-    margin-top: 1%;
+    margin-top: -4%;
     margin-left: -2%;
   }
   .pageNumber {
-    font-size: 2.2rem;
+    font-size: 1.8rem;
     font-weight: bold;
     font-weight: 700;
     color: rgba(255, 0, 0, 0.5);
@@ -296,14 +297,14 @@
   }
   .titulos {
     color: white;
-    font-size: 2em;
+    font-size: 1.6em;
     position: relative;
     z-index: 1;
     margin-top: -5%;
     padding-top: 0;
   }
   .paginado {
-    height: 35vh;
+    height: 36vh;
     width: 80%;
     text-align: center;
     display: flex;
@@ -326,25 +327,24 @@
     color: white;
     border: 2px solid rgba(255, 0, 0, 0.5);
     padding: 5px 10px;
-    margin: 25px 3px;
+    margin: 25px 3px 0 3px;
     cursor: pointer;
     border-radius: 4px;
     overflow: hidden;
     transition: all 500ms ease;
     font-weight: 700;
     z-index: 0;
-    font-size: 1.1em;
+    font-size: 0.85em;
   }
   .buttons {
-    margin-bottom: 5%;
+    margin-bottom: 2%;
     padding-bottom: 0;
     text-align: center;
     justify-content: center;
-    margin-top: 1%;
-    margin-left: -2%;
+    margin-top: -2%;
   }
   .pageNumber {
-    font-size: 2.2rem;
+    font-size: 2rem;
     font-weight: bold;
     font-weight: 700;
     color: rgba(255, 0, 0, 0.5);
@@ -352,4 +352,62 @@
   }
 }
 @media (min-width: 1200px) and (max-width: 1600px) {
+  .principal {
+    height: 85vh;
+  }
+  .titulos {
+    color: white;
+    font-size: 1.6em;
+    position: relative;
+    z-index: 1;
+    margin-top: -5%;
+    padding-top: 0;
+  }
+  .paginado {
+    height: 36vh;
+    width: 80%;
+    text-align: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-left: 10%;
+    overflow: scroll;
+    scrollbar-width: none;
+    -ms-overflow-style: none;
+    scrollbar-color: transparent transparent;
+    border-radius: 2%;
+    box-shadow: 0 0 5px rgba(255, 0, 0, 0.5), 0 0 10px rgba(255, 0, 0, 0.5),
+      0 0 15px rgba(255, 0, 0, 0.5), 0 0 20px rgba(255, 0, 0, 0.5);
+  }
+  .button {
+    height: 3em;
+    width: 9em;
+    position: relative;
+    background-color: #434343;
+    color: white;
+    border: 2px solid rgba(255, 0, 0, 0.5);
+    padding: 5px 10px;
+    margin: 25px 3px 0 3px;
+    cursor: pointer;
+    border-radius: 4px;
+    overflow: hidden;
+    transition: all 500ms ease;
+    font-weight: 700;
+    z-index: 0;
+    font-size: 0.85em;
+  }
+  .buttons {
+    margin-bottom: 2%;
+    padding-bottom: 0;
+    text-align: center;
+    justify-content: center;
+    margin-top: -2%;
+  }
+  .pageNumber {
+    font-size: 2rem;
+    font-weight: bold;
+    font-weight: 700;
+    color: rgba(255, 0, 0, 0.5);
+    margin: 0 20px;
+  }
 }

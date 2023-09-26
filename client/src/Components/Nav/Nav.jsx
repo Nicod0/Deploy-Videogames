@@ -6,14 +6,16 @@ const Nav = ({ onSearch }) => {
   return (
     <div className={style.container}>
       <div className={style.playContainer}>
-        <h2 className={style.title}>PLAY</h2>
+        <h2 className={style.title} translate="no">
+          PLAY
+        </h2>
       </div>
       <div className={style.navLinks}>
         <Link to="/page" className={style.link}>
           Home
         </Link>
         <Link to="/form" className={style.link}>
-          Create Game
+          Crea un juego
         </Link>
       </div>
       <div className={style.searchbar}>
