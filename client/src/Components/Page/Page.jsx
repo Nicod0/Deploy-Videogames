@@ -40,38 +40,42 @@ const Page = () => {
   return (
     <>
       <img src={imgfondo} className={style.fondo} alt="fondo" />
-      <div className={style.principal}>
-        <div className={style.titulos}>
-          <h1 className={style.heading}>Videojuegos</h1>
-        </div>
-        <div className={style.page}>
-          <div className={style.section}>
-            <div className={style.buttons}>
-              <button
-                className={style.button}
-                onClick={prevPage}
-                disabled={currentPage === 1}
-              >
-                ANTERIOR
-              </button>
-              <span className={style.pageNumber}>{currentPage}</span>
-              <button
-                className={style.button}
-                onClick={nextPage}
-                disabled={currentPage === totalPages}
-              >
-                SIGUIENTE
-              </button>
-              <div className={style.filtros}>
-                <Ordered />
+      {loading ? (
+        <Loading />
+      ) : (
+        <div className={style.principal}>
+          <div className={style.titulos}>
+            <h1 className={style.heading}>Videojuegos</h1>
+          </div>
+          <div className={style.page}>
+            <div className={style.section}>
+              <div className={style.buttons}>
+                <button
+                  className={style.button}
+                  onClick={prevPage}
+                  disabled={currentPage === 1}
+                >
+                  ANTERIOR
+                </button>
+                <span className={style.pageNumber}>{currentPage}</span>
+                <button
+                  className={style.button}
+                  onClick={nextPage}
+                  disabled={currentPage === totalPages}
+                >
+                  SIGUIENTE
+                </button>
+                <div className={style.filtros}>
+                  <Ordered />
+                </div>
               </div>
-            </div>
-            <div className={style.paginado}>
-              {loading ? <Loading /> : <Cards allVideogames={currentGames} />}
+              <div className={style.paginado}>
+                <Cards allVideogames={currentGames} />
+              </div>
             </div>
           </div>
         </div>
-      </div>
+      )}
     </>
   );
 };
